@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css" media="screen">
+    <link rel="stylesheet" href="../css/dialog.css" media="screen">
+    <title>Criar acesso</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-child">
+            <h1><b>Faça seu Registro</b></h1>
+            <form id="cadastroForm" action="" method="post">
+                <input id="loginEmail" type="email" placeholder="Login" required>
+                <input id="passwordEmail" type="password" placeholder="Senha" min="4" max="6" required>
+                <button type="submit">Cadastrar</button>
+                <p>Sua senha deve conter entre 4 a 6 caracteres</p>
+            </form>
+        </div>
+    </div>
+    <!-- dialog sucesso -->
+    <div class="dialog">
+        <dialog class="sucesso mostrar">
+            <span class="fa fa-check"></span>
+            <span class="msg">Cadastro realizado com sucesso!</span>
+            <span class="btn-fechar">
+                <span class="fa fa-times-circle"></span>
+            </span>
+        </dialog>
+    </div>
+    <!-- dialog alerta-->
+    <div class="dialog">
+        <dialog class="alerta mostrar">
+            <span class="fa fa-exclamation-triangle"></span>
+            <span class="msg">Alerta: Esse E-mail já existe na base!</span>
+            <span class="btn-fechar">
+                <span class="fa fa-times-circle"></span>
+            </span>
+        </dialog>
+    </div>
+    <script src="../js/cadastro.js" type="module" defer></script>
+</body>
+</html>

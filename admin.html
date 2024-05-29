@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/admin.css" media="screen">
+    <link rel="stylesheet" href="./css/dialog.css" media="screen">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-child">
+            <h1><b>Entre com seu Login</b></h1>
+            <form id="adminForm" action="" method="post">
+                <input id="login" type="email" placeholder="Login" required>
+                <input id="password" type="password" placeholder="Senha" min="4" max="6" autocomplete="current-password"
+                    required>
+                <!-- <input type="tel" name="" id="" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" placeholder="(xx) 1234-5678"> -->
+                <button type="submit">Login</button>
+            </form>
+            <a href="/template/Cadastro.html" title="Faça seu cadastro">Cadastrar-se</a>
+        </div>
+    </div>
+    <!-- dialog sucesso -->
+    <div class="dialog">
+        <dialog class="sucesso mostrar">
+            <span class="fa fa-check"></span>
+            <span class="msg">Acesso liberado!</span>
+            <span class="btn-fechar">
+                <span class="fa fa-times-circle"></span>
+            </span>
+        </dialog>
+    </div>
+    <!-- dialog alerta -->
+    <div class="dialog">
+        <dialog class="alerta mostrar">
+            <span class="fa fa-exclamation-triangle"></span>
+            <span class="msg">Atenção: Você precisa fazer o login</span>
+            <span class="btn-fechar">
+                <span class="fa fa-times-circle"></span>
+            </span>
+        </dialog>
+    </div>
+    <script src="./js/admin.js" type="module" defer></script>
+</body>
+
+</html>

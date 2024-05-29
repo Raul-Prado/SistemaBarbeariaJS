@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+:root{
+    --orange-clean:#ffd489;
+    --orange:orange;
+    --red: red;
+    --green-clean: rgb(123, 255, 123);
+    --green: green;
+}
+div.dialog{
+    display: flex;
+    justify-content: flex-end; /* Alinha a div no canto direito */
+    align-items: flex-start; /* Alinha a div no topo */
+    position: fixed; /* Para manter a div fixa na tela */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    min-width: 400px; /*Distância da direita*/
+    text-align: center;
+}
+/* Alerta */
+dialog.alerta{
+    background-color:var(--orange-clean);
+    border-style: none;
+    padding: 20px;
+    border-left: 8px solid var(--orange);
+    border-radius: 10px;
+}
+/* animação */
+dialog.alerta.mostrar{
+    animation: mostrar_animacao 1s ease forwards;
+}
+@keyframes mostrar_animacao {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+dialog.alerta .fa-exclamation-triangle{
+    color: var(--orange);
+    font-size: 3vh;
+    text-align: center;
+}
+span.btn-fechar span.fa-times-circle{
+    color: var(--red);
+    font-size: 3vh;
+    cursor: pointer;
+}
+dialog.alerta span.msg{
+    padding: 4px;
+    font-size: 2.5vh;
+    text-align: center;
+}
+/* sucesso */
+dialog.sucesso{
+    background-color:var(--green-clean);
+    border-style: none;
+    padding: 20px;
+    border-left: 8px solid var(--green);
+    border-radius: 10px;
+}
+/* animação */
+dialog.sucesso.mostrar{
+    animation: mostrar_animacao 1s ease forwards;
+}
+@keyframes mostrar_animacao {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+dialog.sucesso span.fa-check{
+    color: var(--green);
+    font-size: 3vh;
+    text-align: center;
+}
+span.btn-fechar span.fa-times-circle{
+    color: var(--red);
+    font-size: 3vh;
+    cursor: pointer;
+}
+dialog.sucesso span.msg{
+    padding: 4px;
+    font-size: 2.5vh;
+    text-align: center;
+}

@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /*garantir que o padding e border sejam incluídos nas dimensões */
+}
+:root{
+    --blue-dark: #001f31;
+    --blue-dark2: #041722;
+    --blue-clean:#4885d4;
+    --white: #fff;
+    --cinza: #818181;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* navbar */
+.menu {
+    background-color: #333;
+    padding: 20px 0;
+}
+.logo {
+    margin-left: 20px; /* Adicione um espaço à esquerda do logo */
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza os itens na horizontal */
+}
+
+.menu ul li {
+    margin: 0 10px; /* Espaçamento entre os itens */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+.menu ul li a:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+}
+/* Mobile menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+}
+
+.menu-toggle span {
+    height: 2px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+    display: block;
+}
+.container {
+    display: flex;
+    height: calc(100vh - 60px); /* Subtrai a altura do header */
+    margin-top: 4%;
+}
+/* aside{
+    height: 100vh;
+    width: 30vh;
+    padding: 3vh;
+    flex-shrink: 0;
+    background: #111;
+    color: blue;
+}aside p {
+    margin: 0;
+    font-size: 18px;
+}
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+aside ul li {
+    margin: 15px 0;
+}
+aside ul li a {
+    color: #818181;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+aside ul li a:hover {
+    color: #f1f1f1;
+} */
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.container-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 400px;
+}
+h1{
+    text-align: center;
+    font-size: 1.4em;
+    margin: 10px;
+}
+p{
+    text-align: center;
+    color: #818181;
+    font-size: 1.1em;
+    margin: 10px;
+}
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+#tabela {
+    width: 100%;
+    overflow-x: auto; /* Adiciona rolagem horizontal em telas menores */
+}
+#grafico {
+    max-width: 100%; /* Garante que o gráfico não ultrapasse o contêiner pai */
+    width: auto; /* Permite que o gráfico se ajuste automaticamente à largura do contêiner pai */
+}
+/* tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    display: block;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap;
+}
+th {
+    background-color: var(--blue-clean);
+    font-weight: bold;
+}
+input[type="text"]#filtro {
+    width: calc(40% - 20px);
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/* Rodape */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue-dark);
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 400px;
+}
+h6{
+    font-size: 3vh;;
+}
+footer div.footer-container {
+    flex-grow: 1; /* Faz com que o container ocupe todo o espaço vertical disponível */
+    display: flex;
+    justify-content: space-around; /* Distribui as colunas horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+.footer-coluna {
+    flex: 1; /* Faz com que as colunas ocupem o mesmo espaço */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    margin-top: 10vh;
+}
+
+.footer-coluna h6 {
+    margin-bottom: 10px;
+}
+.footer-coluna p{
+    text-align:center
+}
+.footer-coluna ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-coluna ul li {
+    margin-bottom: 10px;
+}
+
+.footer-coluna ul li:last-child {
+    margin-bottom: 0; /* Remove a margem inferior do último item */
+}
+
+.footer-coluna ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-coluna ul li a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    background-color: var(--cinza);
+    border-style: none;
+    height: 0.5vh;
+    width: 90%; /* Ajusta a largura da linha horizontal */
+    margin: 0 auto; /* Centraliza a linha horizontal */
+}
+
+footer div.footer-rodape {
+    background-color: var(--blue-dark2);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div.footer-rodape a i {
+    font-size: 4vh;
+    color: var(--white);
+    margin-left: 10px;
+}
+/* responsividade */
+/* menu */
+@media screen and (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        display: none;
+    }
+    .menu ul li {
+        margin: 10px 0;
+    }
+    .menu ul.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+/*tabela*/
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    thead, tbody, tr, th, td {
+        display: block;
+    }
+    
+    tr {
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 10px;
+    }
+    
+    td {
+        text-align: left;
+        border: none;
+    }
+    
+    th {
+        display: none; /* Esconde os cabeçalhos em telas menores */
+    }
+}
+/*  */
+@media (min-width: 600px) {
+    .container-card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card {
+        flex: 1 1 200px;
+        max-width: 48%;
+    }
+    footer .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .footer-coluna {
+        flex: 1;
+        margin: 0 10px;
+    }
+    footer .footer-rodape {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

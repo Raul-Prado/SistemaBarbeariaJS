@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /*garantir que o padding e border sejam incluídos nas dimensões */
+}
+:root{
+    --cinza-dark: #424242;
+    --white:#ffffff;
+    --green: #40af00;
+}
+body{
+    background-color: var(--cinza-dark);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 20px; /* Adicionado para espaçamento em telas menores */
+}
+div.container-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Limite de largura para telas maiores */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente para destacar */
+    border-radius: 10px; /* Bordas arredondadas */
+
+}
+.container-child h1, input, .container-child button {
+    margin-bottom: 12px; /* Adiciona espaço entre os elementos */
+}
+input{
+    height: 30px;
+    width: 100%;
+    max-width: 300px; /* Limite de largura para inputs */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button{
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    max-width: 300px; /* Limite de largura para botões */
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 20px;
+    border-radius: 10px;
+    border-style: none;
+    text-transform: uppercase;
+    box-shadow: 0px 12px 20px -15px black;
+    transition: background-color 0.3s, transform 0.2s;
+}
+button:hover{
+    background-color: #3a8f00;
+    transform: translateY(-2px); 
+}
+button:focus {
+    outline: none; /* Removendo a borda de foco padrão */
+    box-shadow: 0px 0px 8px 2px var(--green); /* Adicionando uma sombra de foco */
+}
+a{
+    color: var(--white);
+    margin-top: 12px; /* Espaço acima do link */
+}
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Adicionando padding para telas pequenas */
+    }
+    div.container {
+        padding: 10px; /* Adicionando padding para o container em telas pequenas */
+    }
+    div.container-child {
+        padding: 10px; /* Reduzindo o padding em telas pequenas */
+    }
+    input, button {
+        max-width: 100%; /* Garantir que inputs e botões não ultrapassem a largura da tela */
+    }
+}

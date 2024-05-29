@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css" media="screen">
+    <link rel="stylesheet" href="../css/cadastroFidelidade.css" media="screen">
+    <link rel="stylesheet" href="../css/dialog.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Cadastro - Fidelidade</title>
+</head>
+
+<body>
+    <nav class="menu">
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <img src="img/logo.webp" alt="Logo da empresa" loading="lazy" height="250" width="250">
+        <ul>
+            <li><a href="./index.html" title="Inicio do site" style="color: #FF6E4B;">Home</a></li>
+            <li><a href="./cadastrarFidelidade.html" title="Adquirir Pacote de fidelidade">Cadastrar Fidelidade</a></li>
+            <li><a href="./agendarHorario.html" title="Agendamento de Horario">Agendar Horário</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="cadastro">
+            <h1>Cadastro de Cliente - Programa Fidelidade</h1>
+            <form id="form-cadastro">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nomeFidelidade" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="emailFidelidade" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telFidelidade" name="telefone" required>
+
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="dtNascimentoFidelidade" name="data-nascimento" required>
+
+                <label for="data-cadastro">Data de Cadastro:</label>
+                <input type="date" id="dtCadastroFidelidade" name="data-cadastro" required>
+
+                <label for="data-vencimento">Data de Vencimento:</label>
+                <input type="date" id="dtVencimentoFidelidade" name="data-vencimento" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+        <!-- dialog sucesso -->
+        <div class="dialog">
+            <dialog class="sucesso mostrar">
+                <span class="fa fa-check"></span>
+                <span class="msg">Cadastro realizado com sucesso!</span>
+                <span class="btn-fechar">
+                    <span class="fa fa-times-circle"></span>
+                </span>
+            </dialog>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-coluna">
+                <h6>Menu</h6>
+                <ul>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./cadastrarFidelidade.html">Cadastrar Fidelidade</a>
+                    </li>
+                    <li>
+                        <a href="./agendarHorario.html">Agendar Horário</a>
+                    </li>
+                    <li>
+                        <a href="http://">menu</a>
+                    </li>
+                    <li>
+                        <a href="http://">menu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-coluna">
+                <h6>Contato</h6>
+                <p>Telefone</p>
+                <p>E-mail</p>
+                <p>WhatsApp</p>
+            </div>
+            <div class="footer-coluna">
+                <h6>Sobre</h6>
+                <p>Nosso sistema de gestão para cabeleireiros é uma solução completa e intuitiva projetada para
+                    facilitar o gerenciamento do seu salão de beleza.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-rodape">
+            <div class="redes-sociais">
+                <a href="http://">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="http://">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a>
+                <a href="http://">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="copy">
+                <p>&copy; 2024 Barbearia</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/cadastrarFidelidade.js" type="module" defer></script>
+    <script src="../js/dialog.js" type="module" defer></script>
+    <script src="/js/menuMobile.js" defer></script>
+</body>
+
+</html>
