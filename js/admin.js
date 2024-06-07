@@ -18,7 +18,7 @@ function Login(event){
         setTimeout(function(){
             menssagemSucesso();
                 setTimeout(function(){
-                    window.location.href="/template/index.html";
+                    window.location.href="./template/index.html";
                 }, 1000);
         }, 4000);
     }else{
