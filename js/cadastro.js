@@ -20,7 +20,7 @@ export function cadastroLogin(event){
         setTimeout(function(){
             menssagemSucesso();
                 setTimeout(function(){
-                    window.location.href="./template/index.html";
+                    window.location.href="../index.html";
                 }, 1000);
         }, 4000);
     }
